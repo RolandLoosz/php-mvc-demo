@@ -1,14 +1,14 @@
 <?php
-class Pages {
+class Pages extends Controller {
 	public function __construct() {
-		echo "Loaded";
+		
 	}
 
 	public function index() {
-		echo 'Home page';
+		$this->view('pages/index');
 	}
 
-	public function about() {
-		echo 'About';
+	public function users() {
+		$this->view('pages/users');
 	}
 }
