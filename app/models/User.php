@@ -1,4 +1,5 @@
 <?php
+// todo . check: ez a fájl nem fut le
 class User {
 	private $db;
 

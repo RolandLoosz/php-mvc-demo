@@ -1,4 +1,5 @@
 <?php
+// todo . check: ez a fájl nem fut le
 class Advertisement {
     private $db;
 
@@ -10,6 +11,7 @@ class Advertisement {
 
     public function findAllAds()
     {
+        echo 'hi';
 
         $this->db->query('SELECT * FROM advertisements ORDER BY title');
 

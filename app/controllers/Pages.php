@@ -4,6 +4,7 @@ class Pages extends Controller {
 		$this->userModel = $this->model('User');
 	}
 
+	// todo . check usage
 	public function index() {
 		$users = $this->userModel->getUsers();
 
@@ -18,4 +19,8 @@ class Pages extends Controller {
 	public function users() {
 		$this->view('pages/users');
 	}
+
+	public function advertisements() {
+	    $this->view('pages/advertisements');
+    }
 }

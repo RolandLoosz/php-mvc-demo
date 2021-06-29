@@ -5,8 +5,11 @@ class Advertisements extends Controller {
     }
 
 
-//    public function index()
-//    {
-//        $this->view('pages/advertisements'); // todo . check if gut, if not: video:12.57
-//    }
+    public function advertisements()
+    {
+        $advertisements = $this->advertisementModel->findAllAds();
+        var_dump($advertisements);
+        echo 'hi';
+//        $this->view('pages/advertisements'); // todo . check usage
+    }
 }

@@ -99,6 +99,14 @@ foreach ($data['users'] as $user) {
 
 				<?php
 
+                $path = set_include_path('../../libraries/Controller.php');
+
+//                require $path;
+
+//                require '../../libraries/Controller.php';
+
+                Controller::test();
+
 				//$vendegek = vendegeketLeker();
 				/*
 				while ($sor = mysqli_fetch_assoc($vendegek)) {
@@ -114,6 +122,48 @@ foreach ($data['users'] as $user) {
 				mysqli_free_result($vendegek);
 
 				*/
+
+//                function connect() {
+//                    $host = "localhost";
+//                    $user = "root";
+//                    $pass = "";
+//
+//                    $conn = mysqli_connect($host, $user,$pass) or die("Connection failure!");
+//                    if (false == mysqli_select_db($conn,"php_application")) {
+//                        return null;
+//                    }
+//
+//                    mysqli_query($conn, "SET NAMES UTF-8");
+//                    mysqli_query($conn, "SET character_set_results=utf8");
+//                    mysqli_set_charset($conn, "utf8");
+//
+//                    return $conn;
+//                }
+
+//                function getUsers() {
+//                    if (!($conn = Controller::connect())) {
+//                        return false;
+//                    }
+//
+//                    $result = mysqli_query($conn, "SELECT * FROM users ORDER BY name");
+//                    if ($result == false) {
+//                        die(mysqli_error($conn));
+//                    }
+//                    mysqli_close($conn);
+//                    return $result;
+//                }
+
+                $users = Controller::getUsers();
+
+
+                while ($sor = mysqli_fetch_assoc($users)) {
+                    echo '<tr>';
+                    echo '<td>' . $sor["id"] . '</td>';
+                    echo '<td>' . $sor["name"] . '</td>';
+                    echo '</tr>';
+                }
+                mysqli_free_result($users);
+
 				?>
 
 			</table>
