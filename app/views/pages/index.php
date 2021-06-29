@@ -67,7 +67,7 @@ body {
 	</header>
 	<main>
 		<a href="<?php echo URLROOT; ?>/pages/users"><h3>Users</h3></a> <!-- href. <?php //echo URLROOT; ?> -->
-		<a href="<?php echo URLROOT; ?>/pages/advertisement"><h3>Advertisement</h3></a>
+		<a href="<?php echo URLROOT; ?>/pages/advertisements"><h3>Advertisement</h3></a>
 		<!-- <a href="?page=ads"><h3>Advertisements</h3></a> -->
 	</main>
 

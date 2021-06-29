@@ -28,7 +28,7 @@ foreach ($data['users'] as $user) {
 	}
 
 
-	// todo . check if needed ? keep : delete
+	/*todo . check if needed ? keep : delete*/
 	a:link,
 	a:visited
 	{

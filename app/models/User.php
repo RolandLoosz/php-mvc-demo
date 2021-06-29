@@ -2,16 +2,21 @@
 class User {
 	private $db;
 
-	public function __construct() {
+	public function __construct()
+    {
 		$this->db = new Database;
 	}
 
+	// Get all users
 	public function getUsers()
 	{
+		//prepared statement
 		$this->db->query("SELECT * FROM users");
 
-		$result = $this->db->resultSet();
+		$results = $this->db->resultSet();
 
-		return $result;
+		return $results;
 	}
+
+
 }

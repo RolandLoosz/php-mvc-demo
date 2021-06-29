@@ -1,3 +1,6 @@
+
+<!-- TODO : check usage, if needed ? keep : delete -->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,6 +15,7 @@
 	</header>
 	<main>
 		<button type="submit" formmethod="get">Users</button>
+        <h1>This page is not in use, will be deleted later</h1>
 		<a href="<?php echo URLROOT; ?>/pages/users"><h3>Users</h3></a>
 		<a href="<?php echo URLROOT; ?>/pages/advertisement"><h3>Advertisement</h3></a>
 		<!-- <a href="?page=ads"><h3>Advertisements</h3></a> -->
