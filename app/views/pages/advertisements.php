@@ -82,12 +82,9 @@
             </tr>
 
             <?php
+            set_include_path('../../models/User.php');
 
-            set_include_path('../../libraries/Controller.php');
-
-
-            $ads = Controller::getAdvertisements();
-
+            $ads = User::getAdvertisements();
 
             while ($sor = mysqli_fetch_assoc($ads)) {
                 echo '<tr>';
@@ -102,8 +99,6 @@
         </table>
     </div>
 
-
-    <!-- todo ? back link/button -->
 </main>
 
 </body>

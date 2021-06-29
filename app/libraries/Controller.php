@@ -21,11 +21,7 @@ class Controller {
 		}
 	}
 
-	// todo . delete
-	public function test() {
-	    echo 'hello';
-    }
-
+/*
     function connect() {
         $host = "localhost";
         $user = "root";
@@ -70,5 +66,5 @@ class Controller {
         mysqli_close($conn);
         return $result;
     }
-
+*/
 }

@@ -1,4 +1,7 @@
 <?php
+
+// TODO : check usage
+
 class Database {
 	private $dbHost = DB_HOST;
 	private $dbUser = DB_USER;

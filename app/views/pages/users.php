@@ -88,10 +88,10 @@
 
 				<?php
 
-                set_include_path('../../libraries/Controller.php');
+                set_include_path('../../models/User.php');
 
 
-                $users = Controller::getUsers();
+                $users = User::getUsers();
 
 
                 while ($sor = mysqli_fetch_assoc($users)) {
@@ -107,8 +107,6 @@
 			</table>
 		</div>
 
-
-		<!-- todo ? back link/button -->
 	</main>
 
 </body>
