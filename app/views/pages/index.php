@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title><?php echo SITENAME; ?></title>
+	<title>Advertisements</title>
 
 <style>
 
@@ -60,11 +60,11 @@ body {
 <body>
 
 	<header>
-		<h2>Advertisement Page</h2>
+		<h2>Main Page</h2>
 	</header>
 	<main>
-		<a href="<?php echo URLROOT; ?>/pages/users"><h3>Users</h3></a>
-		<a href="<?php echo URLROOT; ?>/pages/advertisements"><h3>Advertisement</h3></a>
+		<a href="http://localhost/php_app/pages/users"><h3>Users</h3></a>
+		<a href="http://localhost/php_app/pages/advertisements"><h3>Advertisement</h3></a>
 	</main>
 
 </body>
