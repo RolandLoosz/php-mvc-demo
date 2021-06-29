@@ -11,7 +11,7 @@
 <body>
 
 	<header>
-		<h2>Advertisement Page</h2>
+		<h2>no</h2>
 	</header>
 	<main>
 		<button type="submit" formmethod="get">Users</button>
