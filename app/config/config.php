@@ -9,7 +9,7 @@ define('DB_NAME', 'php_application');
 define('APPROOT', dirname(dirname(__FILE__)));
 
 // URLROOT (Dynamic links)
-define('URLROOT', 'localhost/php_app');
+define('URLROOT', 'http://localhost/php_app');
 
 // Sitename
 define('SITENAME', 'Advertisements');
