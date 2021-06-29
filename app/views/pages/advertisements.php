@@ -82,9 +82,9 @@
             </tr>
 
             <?php
-            set_include_path('../../models/User.php');
+            set_include_path('../../models/Model.php');
 
-            $ads = User::getAdvertisements();
+            $ads = Model::getAdvertisements();
 
             while ($sor = mysqli_fetch_assoc($ads)) {
                 echo '<tr>';

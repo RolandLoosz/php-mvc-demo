@@ -1,5 +1,5 @@
 <?php
-class User {
+class Model {
 	private $db;
 
 	// todo . check usage
@@ -39,7 +39,7 @@ class User {
     }
 
     function getUsers() {
-        if (!($conn = User::connect())) {
+        if (!($conn = Model::connect())) {
             return false;
         }
 
@@ -52,7 +52,7 @@ class User {
     }
 
     function getAdvertisements() {
-        if (!($conn = User::connect())) {
+        if (!($conn = Model::connect())) {
             return false;
         }
 

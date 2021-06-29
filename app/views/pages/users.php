@@ -88,10 +88,10 @@
 
 				<?php
 
-                set_include_path('../../models/User.php');
+                set_include_path('../../models/Model.php');
 
 
-                $users = User::getUsers();
+                $users = Model::getUsers();
 
 
                 while ($sor = mysqli_fetch_assoc($users)) {
