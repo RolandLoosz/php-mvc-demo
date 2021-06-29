@@ -1,25 +1,5 @@
 <?php
 class Model {
-	private $db;
-
-	// todo . check usage
-	public function __construct()
-    {
-		$this->db = new Database;
-	}
-
-	// Get all users
-    /*
-	public function getUsers()
-	{
-		//prepared statement
-		$this->db->query("SELECT * FROM users");
-
-		$results = $this->db->resultSet();
-
-		return $results;
-	}
-    */
 
     function connect() {
         $host = "localhost";

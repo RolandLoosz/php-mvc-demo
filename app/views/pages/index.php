@@ -3,9 +3,6 @@
 <head>
 	<meta charset="utf-8">
 	<title><?php echo SITENAME; ?></title>
-	<!-- todo . remove -->
-	<link rel="stylesheet" type="text/css" href="style.css">
-
 
 <style>
 
