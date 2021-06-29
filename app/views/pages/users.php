@@ -1,24 +1,8 @@
-<?php 
-// todo . check later
-// require APPROOT . '/views/includes/head.php';
-/*
-foreach ($data['users'] as $user) {
-	echo "Information: " . $user->name;
-	echo '<br>';
-}
-*/
-
-// <?php echo URLROOT;
-
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<title><?php echo SITENAME; ?></title>
-	<!-- todo . remove -->
-	<link rel="stylesheet" type="text/css" href="style.css">
 
 
 	<style>
@@ -28,7 +12,6 @@ foreach ($data['users'] as $user) {
 	}
 
 
-	/*todo . check if needed ? keep : delete*/
 	a:link,
 	a:visited
 	{
@@ -59,21 +42,27 @@ foreach ($data['users'] as $user) {
 		padding: 8px;
 	}
 
+    tr {
+        background-color: #3A49D6;
+        color: white;
+    }
+
 	tr:nth-child(even) {
-		background-color: chocolate;
+		background-color: #1D8EEB;
 	}
+
 	tr:hover {
-		background-color: #bf5f1b;
+		background-color: #126db8;
 	}
 	tr:hover:nth-child(odd) {
-		background-color: #703812;
+		background-color: #0019ff;
 	}
 
 	th {
 		padding-top: 12px;
 		padding-bottom: 12px;
 		text-align: left;
-		background-color: chocolate;
+		background-color: #3A49D6;
 		color: white;
 	}
 
@@ -89,69 +78,18 @@ foreach ($data['users'] as $user) {
 	<main>
 		<div style="width: 50%; margin-left: 20%;">
 
-			<h1>Felhasználók:</h1>
+			<h1>Users:</h1>
 
 			<table>
 				<tr>
 					<th>Id</th>
-					<th>Név</th>
+					<th>Name</th>
 				</tr>
 
 				<?php
 
-                $path = set_include_path('../../libraries/Controller.php');
+                set_include_path('../../libraries/Controller.php');
 
-//                require $path;
-
-//                require '../../libraries/Controller.php';
-
-                Controller::test();
-
-				//$vendegek = vendegeketLeker();
-				/*
-				while ($sor = mysqli_fetch_assoc($vendegek)) {
-					echo '<form action="vendegszerkesztes.php" method="POST">';
-					echo '<tr>';
-					echo '<td>' . $sor["szemelyiszam"] . '</td>';
-					echo '<td>' . $sor["nev"] . '</td>';
-					echo '<td><input type = "submit" value="Szerkeszt"></td>';
-					echo '</tr>';
-					echo '<input type="hidden" name="szemelyiszam" value="'.$sor["szemelyiszam"].'">';
-					echo '</form>';
-				}
-				mysqli_free_result($vendegek);
-
-				*/
-
-//                function connect() {
-//                    $host = "localhost";
-//                    $user = "root";
-//                    $pass = "";
-//
-//                    $conn = mysqli_connect($host, $user,$pass) or die("Connection failure!");
-//                    if (false == mysqli_select_db($conn,"php_application")) {
-//                        return null;
-//                    }
-//
-//                    mysqli_query($conn, "SET NAMES UTF-8");
-//                    mysqli_query($conn, "SET character_set_results=utf8");
-//                    mysqli_set_charset($conn, "utf8");
-//
-//                    return $conn;
-//                }
-
-//                function getUsers() {
-//                    if (!($conn = Controller::connect())) {
-//                        return false;
-//                    }
-//
-//                    $result = mysqli_query($conn, "SELECT * FROM users ORDER BY name");
-//                    if ($result == false) {
-//                        die(mysqli_error($conn));
-//                    }
-//                    mysqli_close($conn);
-//                    return $result;
-//                }
 
                 $users = Controller::getUsers();
 

@@ -1,7 +1,5 @@
 <?php
-
-// TODO : check usage
-
+// todo . delete
 // Load the model and the view
 class Controller {
 	public function model($model)
@@ -12,6 +10,7 @@ class Controller {
 		return new $model();
 	}
 
+	// todo . delete
 	// Load the view (checks for the file)
 	public function view($view, $data = [])
 	{
@@ -22,6 +21,7 @@ class Controller {
 		}
 	}
 
+	// todo . delete
 	public function test() {
 	    echo 'hello';
     }
@@ -49,6 +49,21 @@ class Controller {
         }
 
         $result = mysqli_query($conn, "SELECT * FROM users ORDER BY name");
+        if ($result == false) {
+            die(mysqli_error($conn));
+        }
+        mysqli_close($conn);
+        return $result;
+    }
+
+    function getAdvertisements() {
+        if (!($conn = Controller::connect())) {
+            return false;
+        }
+
+        $stmt = "SELECT advertisements.title as ad_title, users.name as username FROM advertisements, users WHERE advertisements.userid = users.id ORDER BY ad_title";
+
+        $result = mysqli_query($conn, $stmt);
         if ($result == false) {
             die(mysqli_error($conn));
         }
