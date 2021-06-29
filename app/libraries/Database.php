@@ -44,7 +44,7 @@ class Database {
 			default:
 				$type = PDO::PARAM_STR;
 		}
-		$this->statement->bindValue($parameter, $value, $type);
+		$this->statement->bindValue($param, $value, $type);
 	}
 
 	// Execute the prepared statement
