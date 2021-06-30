@@ -1,26 +1,22 @@
 <?php
 class Pages extends Controller {
 	public function __construct() {
-		$this->userModel = $this->model('Model');
+		$this->mModel = $this->model('Model');
 	}
 
-	// todo . check usage
+	// Main page view
 	public function index() {
-		$users = $this->userModel->getUsers();
-
-		$data = [
-			'title' => 'Home page',
-			'users' => $users
-		];
-
-		$this->view('pages/index', $data);
+		$this->view('pages/index');
 	}
 
+	// Users view
 	public function users() {
 		$this->view('pages/users');
 	}
 
+	// Advertisements view
 	public function advertisements() {
 	    $this->view('pages/advertisements');
     }
+
 }

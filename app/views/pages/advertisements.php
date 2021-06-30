@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <title>Advertisements</title>
@@ -86,10 +86,10 @@
 
             $ads = Model::getAdvertisements();
 
-            while ($sor = mysqli_fetch_assoc($ads)) {
+            while ($row = mysqli_fetch_assoc($ads)) {
                 echo '<tr>';
-                echo '<td>' . $sor["ad_title"] . '</td>';
-                echo '<td>' . $sor["username"] . '</td>';
+                echo '<td>' . $row["ad_title"] . '</td>';
+                echo '<td>' . $row["username"] . '</td>';
                 echo '</tr>';
             }
             mysqli_free_result($ads);

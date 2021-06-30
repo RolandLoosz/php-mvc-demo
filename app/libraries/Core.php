@@ -6,7 +6,6 @@ class Core {
 	protected $params = [];
 
 	public function __construct() {
-		// print_r($this->getUrl());
 		$url = $this->getUrl();
 
 		if (file_exists('../app/controllers' . ucwords($url[0]) . '.php')) {

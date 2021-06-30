@@ -1,13 +1,15 @@
 <?php
 class Model {
 
+    // Connects to the database
     function connect() {
         $host = "localhost";
         $user = "root";
         $pass = "";
+        $name = "php_application";
 
         $conn = mysqli_connect($host, $user,$pass) or die("Connection failure!");
-        if (false == mysqli_select_db($conn,"php_application")) {
+        if (false == mysqli_select_db($conn, $name)) {
             return null;
         }
 
@@ -18,6 +20,7 @@ class Model {
         return $conn;
     }
 
+    // Returns the users
     function getUsers() {
         if (!($conn = Model::connect())) {
             return false;
@@ -31,6 +34,7 @@ class Model {
         return $result;
     }
 
+    // Returns the aadvertisements (and the associated user)
     function getAdvertisements() {
         if (!($conn = Model::connect())) {
             return false;
